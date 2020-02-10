@@ -1,4 +1,4 @@
-package com.czajor.rxjavatutorial.Basictests;
+package com.czajor.rxjavatutorial.basictests;
 
 import io.reactivex.Observable;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,7 @@ import java.util.List;
 import static com.czajor.rxjavatutorial.RxJavaTutorial.getTitle;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ObservableTestSuite {
+class ObservableTestSuite {
 
     private String result = "";
     private String[] letters = {"a", "b", "c", "d", "e", "f", "g"};
@@ -124,5 +124,6 @@ public class ObservableTestSuite {
                 .subscribe(a -> result = a.toString());
         assertEquals("5", result);
     }
+
 
 }
