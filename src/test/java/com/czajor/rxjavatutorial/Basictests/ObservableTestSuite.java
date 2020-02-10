@@ -99,5 +99,30 @@ public class ObservableTestSuite {
         assertEquals("246810", even);
     }
 
+    @Test
+    void shouldInformAboutEmptyObservable() {
+        String info = "Observable is Empty";
+        Observable.empty()
+                .defaultIfEmpty(info)
+                .subscribe(s -> result += s);
+        assertEquals(info, result);
+    }
+
+    @Test
+    void shouldReturnFirstElementOnly() {
+        String info = "Observable is Empty";
+        Observable.fromArray(letters)
+                .first(info)
+                .subscribe(s -> result += s);
+        assertEquals(letters[0], result);
+    }
+
+    @Test
+    void shouldReadElementsWhileNextEquals5() {
+        Observable.fromArray(numbers)
+                .takeWhile(a -> a < 6)
+                .subscribe(a -> result = a.toString());
+        assertEquals("5", result);
+    }
 
 }
