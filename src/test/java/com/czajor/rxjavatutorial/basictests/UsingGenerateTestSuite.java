@@ -9,7 +9,7 @@ import java.io.FileReader;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UsingTestSuite {
+public class UsingGenerateTestSuite {
     private String result = "";
     private String path = "test.txt";
 
